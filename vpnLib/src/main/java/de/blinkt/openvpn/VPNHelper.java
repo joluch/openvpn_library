@@ -45,6 +45,19 @@ public class VPNHelper extends Activity {
         VpnStatus.initLogCache(activity.getCacheDir());
     }
 
+    public String getLog() {
+        LogItem[] logBuffer = VpnStatus.getlogbuffer();
+
+        String logs = "";
+        for (LogItem item : logBuffer) {
+            if (item.getLogLevel().getInt() <= 2) {
+                logs += item.toString() + "\n"
+            }
+        }
+
+        return logs;
+    }
+
     public void setOnVPNStatusChangeListener(OnVPNStatusChangeListener listener) {
         VPNHelper.listener = listener;
         LocalBroadcastManager.getInstance(activity).registerReceiver(broadcastReceiver, new IntentFilter("connectionState"));
