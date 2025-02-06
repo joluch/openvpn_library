@@ -51,7 +51,7 @@ public class VPNHelper extends Activity {
         String logs = "";
         for (LogItem item : logBuffer) {
             if (item.getLogLevel().getInt() <= 2) {
-                logs += item.toString() + "\n"
+                logs += item.toString() + "\n";
             }
         }
 
