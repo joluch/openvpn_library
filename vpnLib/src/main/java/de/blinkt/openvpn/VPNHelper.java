@@ -20,6 +20,7 @@ import java.util.List;
 import de.blinkt.openvpn.core.OpenVPNService;
 import de.blinkt.openvpn.core.OpenVPNThread;
 import de.blinkt.openvpn.core.VpnStatus;
+import de.blinkt.openvpn.core.LogItem;
 
 public class VPNHelper extends Activity {
     public Activity activity;
