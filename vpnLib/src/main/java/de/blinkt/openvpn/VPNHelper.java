@@ -50,9 +50,11 @@ public class VPNHelper extends Activity {
         LogItem[] logBuffer = VpnStatus.getlogbuffer();
         String logs = "";
         for (LogItem item : logBuffer) {
-            if (item.getLogLevel().getInt() <= 2) {
-                logs += item.toString() + "\n";
-            }
+            try {
+                if (item.getLogLevel().getInt() <= 2) {
+                    logs += item.toString() + "\n";
+                }
+            } catch (Exception e) { }
         }
 
         return logs;
