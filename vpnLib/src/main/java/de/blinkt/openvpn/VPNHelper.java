@@ -62,7 +62,7 @@ public class VPNHelper extends Activity {
 
 
     public void addToLog(String message) {
-        VpnStatus.logMessage(VpnStatus.LogLevel(2), "", message)
+        VpnStatus.logMessage(VpnStatus.LogLevel(2), "", message);
     }
 
     public void setOnVPNStatusChangeListener(OnVPNStatusChangeListener listener) {
