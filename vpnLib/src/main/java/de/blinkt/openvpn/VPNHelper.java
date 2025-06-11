@@ -20,6 +20,7 @@ import java.util.List;
 import de.blinkt.openvpn.core.OpenVPNService;
 import de.blinkt.openvpn.core.OpenVPNThread;
 import de.blinkt.openvpn.core.VpnStatus;
+import de.blinkt.openvpn.core.VpnStatus.LogLevel;
 import de.blinkt.openvpn.core.LogItem;
 
 public class VPNHelper extends Activity {
@@ -62,7 +63,7 @@ public class VPNHelper extends Activity {
 
 
     public void addToLog(String message) {
-        VpnStatus.logMessage(VpnStatus.LogLevel(2), "", message);
+        VpnStatus.logMessage(LogLevel.INFO, "", message);
     }
 
     public void setOnVPNStatusChangeListener(OnVPNStatusChangeListener listener) {
